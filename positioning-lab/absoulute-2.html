@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Positioning Exercises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f7f7f7;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    section {
+      border: 2px solid #333;
+      background: #fff;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 800px;
+      min-height: 220px;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Shared box styling */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      border: 2px solid #333;
+      color: #000;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* ----------------------------
+       EXERCISE 1
+       Required: Float
+       Optional: Absolute, Flexbox, Grid
+    -----------------------------*/
+
+    /* Float layout */
+    .exercise1-float .box {
+      float: left;
+      margin-right: 10px;
+    }
+
+    /* Absolute layout */
+    .exercise1-absolute {
+      position: relative;
+      height: 150px;
+    }
+
+    .exercise1-absolute .box:nth-child(1) {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .exercise1-absolute .box:nth-child(2) {
+      position: absolute;
+      top: 20px;
+      left: 140px;
+    }
+    .exercise1-absolute .box:nth-child(3) {
+      position: absolute;
+      top: 20px;
+      left: 260px;
+    }
+
+    /* Flexbox layout */
+    .exercise1-flex {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Grid layout */
+    .exercise1-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+    }
+
+    /* ----------------------------
+       EXERCISE 2
+       Required: Float (Right)
+       Optional: Absolute, Flexbox, Grid
+    -----------------------------*/
+
+    /* Float layout (right-aligned) */
+    .exercise2-float .box {
+      float: right;
+      margin-left: 10px;
+    }
+
+    /* Absolute layout */
+    .exercise2-absolute {
+      position: relative;
+      height: 150px;
+    }
+
+    .exercise2-absolute .box:nth-child(1) {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .exercise2-absolute .box:nth-child(2) {
+      position: absolute;
+      top: 20px;
+      right: 140px;
+    }
+    .exercise2-absolute .box:nth-child(3) {
+      position: absolute;
+      top: 20px;
+      right: 260px;
+    }
+
+    /* Flexbox layout (right-aligned) */
+    .exercise2-flex {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    /* Grid layout (right-aligned) */
+    .exercise2-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      justify-content: end;
+      gap: 10px;
+    }
+
+    /* ----------------------------
+       EXERCISE 3
+       Required: Absolute
+       Optional: Float, Flexbox, Grid
+    -----------------------------*/
+    .exercise3-absolute {
+      position: relative;
+      height: 200px;
+    }
+
+    .exercise3-absolute .box {
+      position: absolute;
+      top: 50px;
+      left: 100px;
+    }
+
+    /* Optional: Float layout */
+    .exercise3-float .box {
+      float: left;
+      margin-right: 10px;
+    }
+
+    /* Optional: Flexbox layout */
+    .exercise3-flex {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Optional: Grid layout */
+    .exercise3-grid {
+      display: grid;
+      place-items: center;
+    }
+
+    /* ----------------------------
+       EXERCISE 4
+       Required: Absolute (bottom right)
+       Optional: Float, Flexbox, Grid
+    -----------------------------*/
+    .exercise4-absolute {
+      position: relative;
+      height: 200px;
+    }
+
+    .exercise4-absolute .box {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    /* Optional: Float layout */
+    .exercise4-float .box {
+      float: right;
+      margin-left: 10px;
+    }
+
+    /* Optional: Flexbox layout (bottom right) */
+    .exercise4-flex {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 200px;
+      gap: 10px;
+    }
+
+    /* Optional: Grid layout (bottom right) */
+    .exercise4-grid {
+      display: grid;
+      align-content: end;
+      justify-content: end;
+      height: 200px;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Positioning Practice</h1>
+
+  <!-- Exercise 1 -->
+  <section>
+    <h2>Exercise 1</h2>
+    <h3>Required: Float</h3>
+    <div class="exercise1-float">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="clear"></div>
+    </div>
+
+    <h3>Optional: Absolute</h3>
+    <div class="exercise1-absolute">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h3>Optional: Flexbox</h3>
+    <div class="exercise1-flex">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h3>Optional: Grid</h3>
+    <div class="exercise1-grid">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </section>
+
+  <!-- Exercise 2 -->
+  <section>
+    <h2>Exercise 2</h2>
+    <h3>Required: Float (Right)</h3>
+    <div class="exercise2-float">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="clear"></div>
+    </div>
+
+    <h3>Optional: Absolute</h3>
+    <div class="exercise2-absolute">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+
+    <h3>Optional: Flexbox</h3>
+    <div class="exercise2-flex">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+
+    <h3>Optional: Grid</h3>
+    <div class="exercise2-grid">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </section>
+
+  <!-- Exercise 3 -->
+  <section>
+    <h2>Exercise 3</h2>
+    <h3>Required: Absolute</h3>
+    <div class="exercise3-absolute">
+      <div class="box">X</div>
+    </div>
+
+    <h3>Optional: Float</h3>
+    <div class="exercise3-float">
+      <div class="box">X</div>
+      <div class="box">Y</div>
+      <div class="clear"></div>
+    </div>
+
+    <h3>Optional: Flexbox</h3>
+    <div class="exercise3-flex">
+      <div class="box">X</div>
+      <div class="box">Y</div>
+    </div>
+
+    <h3>Optional: Grid</h3>
+    <div class="exercise3-grid">
+      <div class="box">X</div>
+    </div>
+  </section>
+
+  <!-- Exercise 4 -->
+  <section>
+    <h2>Exercise 4</h2>
+    <h3>Required: Absolute</h3>
+    <div class="exercise4-absolute">
+      <div class="box">Y</div>
+    </div>
+
+    <h3>Optional: Float</h3>
+    <div class="exercise4-float">
+      <div class="box">Y</div>
+      <div class="clear"></div>
+    </div>
+
+    <h3>Optional: Flexbox</h3>
+    <div class="exercise4-flex">
+      <div class="box">Y</div>
+    </div>
+
+    <h3>Optional: Grid</h3>
+    <div class="exercise4-grid">
+      <div class="box">Y</div>
+    </div>
+  </section>
+
+</body>
+</html>
