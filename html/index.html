@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- Proper Doctype declaration for HTML5 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- Title of the web page -->
+  <title>Prototype HTML Document Example</title>
+
+  <!-- Meta description -->
+  <meta name="description" content="Sample prototype HTML document demonstrating XHTML syntax and HTML5 structure." />
+
+  <!-- Author metadata -->
+  <meta name="author" content="Brandon Coleman" />
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+
+  <!-- Internal CSS -->
+  <style type="text/css">
+    /* Smooth scroll behavior for Back to Top link */
+    html { scroll-behavior: smooth; }
+
+    /* Body styling */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main container */
+    main {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Sticky header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+      padding: 20px 0;
+      background-color: #e3f2fd;
+      border-bottom: 2px solid #90caf9;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #1565c0;
+    }
+
+    /* Sticky navigation */
+    nav {
+      position: sticky;
+      top: 80px;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #bbdefb;
+      margin: 0 0 20px 0;
+      border-radius: 5px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #90caf9;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    /* Section content */
+    section#content h2, section#content h3, section#content h4, section#content h5 {
+      color: #0d47a1;
+    }
+
+    section#content p {
+      margin-bottom: 15px;
+    }
+
+    /* Lists */
+    ol, ul, dl {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Blockquote */
+    blockquote {
+      margin: 20px;
+      padding: 15px;
+      background-color: #e3f2fd;
+      border-left: 5px solid #1565c0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+      opacity: 0; /* hidden for scroll animation */
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    table th, table td {
+      border: 1px solid #90caf9;
+      padding: 8px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #bbdefb;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #f1f8ff;
+    }
+
+    table caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0d47a1;
+    }
+
+    /* Images */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border: 2px solid #90caf9;
+      border-radius: 5px;
+      opacity: 0; /* hidden for scroll animation */
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    /* Scroll animation class */
+    .show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #e3f2fd;
+      border-top: 2px solid #90caf9;
+      margin-top: 20px;
+    }
+
+    footer h6 a {
+      text-decoration: none;
+      color: #1565c0;
+      transition: all 0.3s ease;
+    }
+
+    footer h6 a:hover {
+      text-decoration: underline;
+    }
+
+    a[href="#top"] { margin-left: 10px; }
+  </style>
+</head>
+
+<body>
+  <main id="top">
+    <!-- Header -->
+    <header>
+      <h1>Welcome to My Prototype HTML5 Document</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Go to Home Page">Home</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Buffalo_National_River" title="Learn about Buffalo National River">About</a></li>
+        <li><a href="https://ualr.edu" target="_blank" title="Visit University of Arkansas at Little Rock">UALR</a></li>
+        <li><a href="mailto:brandon@example.com" title="Contact via email">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <section id="content">
+      <h2 class="scroll-element">HTML Structure Overview</h2>
+      <p class="scroll-element">
+        This document demonstrates the use of various <strong>HTML5 structural elements</strong> and 
+        <em>XHTML syntax</em> for proper formatting and validation.
+      </p>
+
+      <h3 class="scroll-element">Example Lists</h3>
+
+      <!-- Ordered List -->
+      <h4 class="scroll-element">Ordered List Example</h4>
+      <ol class="scroll-element">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
+
+      <!-- Unordered List -->
+      <h4 class="scroll-element">Unordered List Example</h4>
+      <ul class="scroll-element">
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Cherries</li>
+      </ul>
+
+      <!-- Definition List -->
+      <h4 class="scroll-element">Definition List Example</h4>
+      <dl class="scroll-element">
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+      </dl>
+
+      <h3 class="scroll-element">Quotes</h3>
+      <p class="scroll-element">
+        Inline quote example: The professor said, 
+        <q>Always close your tags when writing XHTML!</q>
+      </p>
+
+      <blockquote class="scroll-element" cite="https://www.w3.org/TR/html52/">
+        This is a block-level quote demonstrating the proper semantic use of the 
+        <code>&lt;blockquote&gt;</code> element in HTML5.
+      </blockquote>
+
+      <h3 class="scroll-element">Sample Table</h3>
+      <table class="scroll-element" border="1">
+        <caption>Sample 5x5 Data Table</caption>
+        <thead>
+          <tr>
+            <th scope="col">Header 1</th>
+            <th scope="col">Header 2</th>
+            <th scope="col">Header 3</th>
+            <th scope="col">Header 4</th>
+            <th scope="col">Header 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Row 1</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr>
+          <tr><td>Row 2</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr>
+          <tr><td>Row 3</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr>
+          <tr><td>Row 4</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr>
+          <tr><td>Row 5</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="scroll-element">Sample Image</h3>
+      <img class="scroll-element" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Placeholder Image" width="300" height="200" />
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <h6>
+        &copy; 2025 Brandon Coleman | 
+        <a href="mailto:brandon@example.com">Email Me</a> | 
+        <a href="#top">Back to Top</a>
+      </h6>
+    </footer>
+  </main>
+
+  <!-- Scroll Animation JS -->
+  <script type="text/javascript">
+    // Animate elements on scroll
+    const elements = document.querySelectorAll('.scroll-element');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
